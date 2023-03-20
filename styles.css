@@ -1,0 +1,112 @@
+
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reset Global styles to 0, set font to Poppins */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background:  #0a2a43;
+}
+
+/* Text Container which adds margin & padding  */
+.text-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*  Set title text to display in center of page, add margin on Y-axis */
+.text-container h1 {
+    text-align: center;
+    margin: 1.2rem 0;
+}
+
+/*  make section elements take up the full viewport height & width */
+/*  Hide element overflow, add flexbox styles */
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #0a2a43, transparent);
+    z-index: 10000;
+}
+
+section:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  #0a2a43;
+    z-index: 10000;
+    mix-blend-mode: color;
+
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    /* filter: blur(5px); */
+}
+
+#banner-text {
+    position: relative;
+    z-index: 1;
+    color: #fafafa;
+    text-align: center;
+    font-size: 10em;
+}
+
+
+section p {
+    position: relative;
+    z-index: 1;
+    color: #fafafa;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+section h1 {
+    font-size: 3em;
+    color: #fafafa;
+
+}
+
+footer {
+    position: relative;
+    z-index: 1;
+    color: #fafafa;
+    text-align: center;
+    font-size: 1.1em;
+    background:  #0a2a43;
+    padding: 1rem 0;
+
+}
+
+/*  Set background road image z-index for parallax effect  */
+#road {
+    z-index: 2;
+}
